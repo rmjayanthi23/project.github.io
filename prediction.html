@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Crop yield predication using ML</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="static/assets/css/templatemo-plot-listing.css">
+    <link rel="stylesheet" href="static/assets/css/animated.css">
+    <link rel="stylesheet" href="static/assets/css/owl.css">
+    <!--
+
+    TemplateMo 564 Plot Listing
+
+    https://templatemo.com/tm-564-plot-listing
+
+    -->
+</head>
+
+<body>
+
+<!-- ***** Preloader Start ***** -->
+
+<!-- ***** Preloader End ***** -->
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+  <!--<div class="container" style="padding-top: 5px;">-->
+    <div class="row">
+
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+
+
+
+
+
+             <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+        <ul class="nav">
+                        <li><a href="/loginhome"  style="font-weight: bolder;color:white;font-size=20px;">Home</a></li>
+                        <li><a href="/upload" style="font-weight: bolder;color:white;font-size=20px">Upload</a></li>
+                        <li><a download href="static/assets/file/Book1.xlsx" style="font-weight: bolder;color:white;font-size=20px">viewdata</a></li>
+
+                        <!--<li><a href="/model" style="font-weight: bolder;font-size=20px">Model</a></li>-->
+
+                       <!-- <li><a href="/graph" style="font-weight: bolder;color:white;font-size=20px">Graph</a></li>-->
+                        <li><a href="/" style="font-weight: bolder;font-size=20px;color:white;">Logout</a></li>
+                               <li><a href="/about" class="active" style="font-weight: bolder;color:white;font-size=20px"><img src="static/assets/images/th (2).jpg" width="20" height="40";> </a></li>
+
+                    </ul>
+  </div>
+</nav>
+            <h1> <b><a class="navbar-brand" href="index.html" style="color:white; font-size:30px;padding-top=200px"> CROP YIELD PREDICTION  <span style="color:black;"> </span></a></b></h1>
+
+
+
+
+          <h1> <b><a class="navbar-brand" href="index.html" style="color:white; font-size:30px">  <span style="color:black;background-image:linear-gradient(to right,#1e9600, #fff200, #ff0000);">CRYPML </span></a></b></h1>
+          <a href="index.html">
+          </a>
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Menu Start ***** -->
+
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  <!--</div>-->
+</header>
+
+<!-- ***** Header Area End ***** -->
+<head>
+    <script type="text/javascript">
+        function show_alert() {
+            alert("go to GRAGH ");
+        }
+    </script>
+    <style>
+h2 {
+  text-shadow: 2px 2px 10px black;
+}
+h3 {
+  text-shadow: 2px 2px 8px black;
+}
+center {
+  background-image: url('static/assets/images/one.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+</head>
+<center style="background-image:url('static/assets/images/one.jpg');" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="top-text header-text">
+                        <center><h2 style="color:yellow; font-size:50px"> <h2 style="opacity:0.0"> <br>
+        alskgno
+     <br></h2><h2 style="opacity:0.0"> <br>
+        alskgno
+     <br></h2></h2></center><br><br><br>
+
+                        <center><h3 style="color:red; font-size:50px">{{msg}}</h3></center>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider">
+            <div class="slider-cap-wrapper">
+                <div class="hero__caption">
+
+                    <div class="mb-3">
+
+
+                        <section class="about-section py-5">
+                            <div class="container py-lg-4 pt-3">
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-md-8">
+                                        <div class="section-heading mb-sm-5 mb-4">
+
+
+                                            <form action="{{url_for('prediction')}}" method="post" >
+
+<!--                                                <input type="number" name="State" placeholder="State" style="margin-top: 20px;height: 40px;">-->
+                                                  <select name="State" style="height: 40px;width: 190px;width: 190px;">
+                                                     <option value="0">Select an State</option>
+                                                    <option value="1">Andhra Pradesh</option>
+                                                    <option value="2">Telangana </option>
+                                                    <option value="3">Arunachal Pradesh</option>
+                                                    <option value="4">Chandigarh</option>
+                                                    <option value="5">Karnataka</option>
+                                                    <option value="6">Gujarat</option>
+                                                    <option value="7">Tamil Nadu</option>
+                                                    <option value="8">Odisha</option>
+                                                    <option value="9">Rajasthan</option>
+                                                      <option value="10">Uttar Pradesh</option>
+                                                      <option value="11">West Bengal</option>
+
+                                                </select>
+
+                                                <input type="number" name="Year" placeholder="Year" style="margin-top: 20px;height: 40px;">
+
+                                                <input type="number" name="Crop" placeholder="Crop" style="margin-top: 20px;height: 40px;">
+
+                                                <input type="number" name="Area" placeholder="Area" style="margin-top: 20px;height: 40px;">
+
+                                                <input type="number" name="Rain" placeholder="Rain" style="margin-top: 20px;height: 40px;"><br><br>
+
+    <input type="button" onclick="window.location.href='http://127.0.0.1:5000/model';" value=" Back " style="width: 150px   px;height: 30px;}">
+
+                                                &nbsp<input type="submit" value="Submit" class="btn btn-primary"  style="width: 70px;height: 30px;"></i></input>
+
+                                            </form>
+                                            <h2 style="opacity:0.0"> <br>
+        alskgno
+     <br><br><br>
+     <br></h2><br><br><br><br><br><br>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+</center>
+
+</form>
+<style>
+ .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+</style>
+
+<div class="footer">
+            All &copy; copyright reserved || CRYPML
+
+             </div>
+
+<!-- Scripts -->
+<script src="static/vendor/jquery/jquery.min.js"></script>
+<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/js/owl-carousel.js"></script>
+<script src="static/assets/js/animation.js"></script>
+<script src="static/assets/js/imagesloaded.js"></script>
+<script src="static/assets/js/custom.js"></script>
+
+</body>
+
+</html>
+
+
+
+

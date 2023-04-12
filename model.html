@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Crop yield predication using ML</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="static/assets/css/templatemo-plot-listing.css">
+    <link rel="stylesheet" href="static/assets/css/animated.css">
+    <link rel="stylesheet" href="static/assets/css/owl.css">
+    <!--
+
+    TemplateMo 564 Plot Listing
+
+    https://templatemo.com/tm-564-plot-listing
+
+    -->
+     <script type="text/javascript">
+        function show_alert() {
+            alert("Go to Prediction for final result!!!");
+        }
+    </script>
+</head>
+
+<body>
+
+<!-- ***** Preloader Start ***** -->
+
+<!-- ***** Preloader End ***** -->
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+  <!--<div class="container" style="padding-top: 5px;">-->
+    <div class="row">
+
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+
+
+
+
+
+             <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+        <ul class="nav">
+                        <li><a href="/loginhome"style="font-weight: bolder;color:white;font-size=20px">Home</a></li>
+                        <li><a href="/upload" style="font-weight: bolder;color:white;font-size=20px">Upload</a></li>
+                        <!--<li><a href="/viewdata" style="font-weight: bolder;color:white;font-size=20px">viewdata</a></li>-->
+                       <!-- <li><a href="/preprocessing" style="font-weight: bolder;color:white;font-size=20px">Preprocessing</a></li>-->
+                       <!-- <li><a href="/model" style="font-weight: bolder;color:white;font-size=20px">Model</a></li>-->
+                        <li><a href="/prediction" style="font-weight: bolder;color:white;font-size=20px">prediction</a></li>
+                        <li><a href="/" style="font-weight: bolder;color:white;font-size=20px">Logout</a></li>
+
+
+                                    <li><a href="/about" class="active" style="font-weight: bolder;color:white;font-size=20px"><img src="static/assets/images/th (2).jpg" width="20" height="40";> </a></li>
+
+                    </ul>
+  </div>
+</nav>
+            <h1> <b><a class="navbar-brand" href="index.html" style="color:white; font-size:30px;padding-top=200px"> CROP YIELD PREDICTION  <span style="color:black;"> </span></a></b></h1>
+
+
+
+
+          <h1> <b><a class="navbar-brand" href="index.html" style="color:white; font-size:30px">  <span style="color:black;background-image:linear-gradient(to right,#1e9600, #fff200, #ff0000);">CRYPML </span></a></b></h1>
+          <a href="index.html">
+          </a>
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Menu Start ***** -->
+
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  <!--</div>-->
+</header>
+
+
+<!-- ***** Header Area End ***** -->
+<head>
+    <style>
+
+h2 {
+  text-shadow: 2px 2px 8px black;
+}
+h3 {
+  text-shadow: 2px 2px 4px black;
+}    <style>
+
+center {
+  background-image: url('static/assets/images/r.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+</style>
+</head>
+<center style="background-image:url('static/assets/images/r.jpg');">
+<br><br><br><br><br><br>      <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="top-text header-text">
+                        <center><h2 style="color:yellow; font-size:50px"></h2><br><br><br>
+                         <center>
+                             <h3 style="color:red; font-size:40px"><b>{{msg}}</b></h3>
+                                            </center>
+                        </center>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider">
+            <div class="slider-cap-wrapper">
+                <div class="hero__caption">
+
+                    <div class="mb-3">
+
+                        <section class="about-section py-5">
+                            <div class="container py-lg-4 pt-3">
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-md-8">
+                                        <div class="section-heading mb-sm-5 mb-4">
+
+
+                                            <form action="{{url_for('model')}}" method="post" >
+
+                                                <label><h6 style="color:white;font-size:35px;"><b>  Choose your Algorithm</b></h6></label>&nbsp&nbsp&nbsp&nbsp<br><br><br>
+                                                <select name="algo" style="height: 30px;width:350px">
+                                                    <option value="0">Select an Algorithm</option>
+                                                    <option value="1">Random Forest Regressor</option>
+                                                    <option value="2">Decision Tree Regressor</option>
+                                                    <option value="3">SVR </option>
+                                                    <option value="4">Bagging Regressor </option>
+                                                    <option value="5">GradientBoosting Regressor </option>
+                                                    <option value="6">KNeighbors Regressor </option>
+                                                    <option value="7">ExtraTreeRegressor </option>
+
+                                                </select><br><br>
+<br>
+                                                <input type="button" onclick="window.location.href='http://127.0.0.1:5000/preprocessing';" value=" Preprocess " style="width: 20  px;height: 30px;}">
+
+                                                &nbsp<input type="submit" value="Submit" class="btn btn-primary"  style="width: 20 px;height: 30px;}"></i></input>
+                                                &nbsp&nbsp
+                                                <input type="button" value="Next" onclick="show_alert()" style="width: 20px  px;height: 30px;}">
+
+                                            </form>
+                                            <h2 style="opacity:0.0"> <br>
+        alskgno
+     <br></h2><h2 style="opacity:0.0">
+        alskgno
+     <br></h2><br><br><br><br><br>
+     <br><br>
+     <style>
+ .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+</style>
+<div class="footer">
+            All &copy; copyright reserved || CRYPML
+
+             </div>
+
+                                            <!-- Scripts -->
+                                            <script src="static/vendor/jquery/jquery.min.js"></script>
+                                            <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                                            <script src="static/assets/js/owl-carousel.js"></script>
+                                            <script src="static/assets/js/animation.js"></script>
+                                            <script src="static/assets/js/imagesloaded.js"></script>
+                                            <script src="static/assets/js/custom.js"></script>
+
+</body>
+
+</html>
